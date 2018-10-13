@@ -9,6 +9,6 @@ class Practica {
     static constraints = {
         fechaPrescripcion (blank:false)
         //fechaRealizacion (blank:false, validator: {fechaPrescripcion-> if (it < fechaPrescripcion) return [‘fechaRealizacioInvalida’]} )
-        resultado (maxSize : 500)
+        resultado (maxSize:500)
     }
 }

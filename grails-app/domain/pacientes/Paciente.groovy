@@ -13,13 +13,12 @@ class Paciente {
 
     static constraints = {
       nroDocumento(blank:false, unique:true)
-      apellido(blank: false, maxSize:100)
-      nombre(blank: false, maxSize:100)
-      sexo (blank: false, inList:['F','M'])
+      apellido(blank:false, maxSize:100)
+      nombre(blank:false, maxSize:100)
+      sexo (blank:false, inList:['F','M'])
       //fechaNacimiento (blank:false,validator: { if ( it >2018) return [‘anioIncorrecto’] } )
       fechaNacimiento (blank:false)
-        telefono(blank: false)
-      email (nullable: true, email:true)
+      telefono (blank:false)
+      email (nullable:true, email:true)
     }
-
 }
