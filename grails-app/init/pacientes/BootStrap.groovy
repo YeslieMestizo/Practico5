@@ -7,8 +7,8 @@ class BootStrap {
         /*Ejercicio 1
         Crear 2 instancias de la clase Paciente(paciente1 y paciente2),1 con todas sus
         propiedades correctas y otra instancia con algún atributo incorrecto*/
-        Paciente paciente1 = new Paciente(nroDocumento:22137612,apellido:'LOPEZ',nombre:'LUIS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1998-04-23'),telefono:30813221123,email:'lulo@gmail.com')
-        Paciente paciente2 = new Paciente(nroDocumento:22134612,apellido:'CANO',nombre:'MATHIAS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1995-11-14'),telefono:33233476688,email:'maty@gmail.com')
+        Paciente paciente1 = new Paciente(nroDocumento:22137612,apellido:'LOPEZ',nombre:'LUIS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1998-04-23'),telefono:'368-132211',email:'lulo@gmail.com')
+        Paciente paciente2 = new Paciente(nroDocumento:22134612,apellido:'CANO',nombre:'MATHIAS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1995-11-14'),telefono:'332-476688',email:'maty@gmail.com')
         paciente1.save()
         paciente2.save()
         if(!paciente1.save(flush:true)){
@@ -19,21 +19,13 @@ class BootStrap {
         if(paciente1.equals(paciente2)){
             println "ERROR"
         }
-<<<<<<< HEAD
         def listaPaciente = Paciente.findAll("from Paciente")
         def listaPacs = [paciente1,paciente2]
-        //def listaPacs = [listaPaciente]
-        //println listaPaciente
+        println listaPaciente
         for(pac in listaPacs) {
-            println "DNI "+pac.nroDocumento+", Apellido: "+pac.apellido+", Nombre: "+pac.nombre+", Sexo: "+pac.sexo+", Fecha nacimiento: "+pac.fechaNacimiento
+            println "DNI "+pac.nroDocumento+", Apellido: "+pac.apellido+", Nombre: "+pac.nombre+", Sexo: "+pac.sexo+", Fecha nacimiento: "+pac.fechaNacimiento+", Telf: "+pac.telefono+", Email: "+pac.email
         }
     
-=======
-        def listaPaciente= Paciente.findAll("from Paciente")
-        println listaPaciente.nombre
-
-
->>>>>>> 267ada64de2ff54d68408679b6caceb9b354bb3e
         /*Ejercicio 2
         Crear y guardar dos instancias de la clase “Consulta” correspondientes al “paciente1”.*/
         Consulta consulta1 = new Consulta (fecha:Date.parse('yyyy-MM-dd','2015-10-13'),hora:'12:12',motivo:'consulta',diagnostico:'Nada complicado',tratamiento:'reposo',paciente:paciente1)
@@ -49,13 +41,10 @@ class BootStrap {
         tipo1.save()
         tipo2.save()
 
-<<<<<<< HEAD
-        
-=======
         /*Ejercicio 4
         Crear y guardar tres instancias de la clase “Practica”, donde dos de ellas correspondan al
         “TipoPractica” con código igual a “231265”*/
-        def paciente3 = new Paciente(nroDocumento:22538692, apellido:'MONO',nombre:'LEO',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1981-02-03'), telefono:332-546285, email:'leo@gmail.com')
+        Paciente paciente3 = new Paciente(nroDocumento:22538692, apellido:'MONO',nombre:'LEO',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1981-02-03'), telefono:'332-546285', email:'leo@gmail.com')
         Practica practica1 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-10-13'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-10-23'),resultado:'bueno',paciente:paciente1, tipoPractica:tipo1)
         Practica practica2 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-11-12'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-11-28'),resultado:'medio',paciente:paciente2, tipoPractica:tipo1)
         Practica practica3 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-12-05'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-12-30'),resultado:'bueno',paciente:paciente3, tipoPractica:tipo2)
@@ -63,30 +52,26 @@ class BootStrap {
         practica1.save()
         practica2.save()
         practica3.save()
+        listaPacs.add(paciente3)
 
->>>>>>> 267ada64de2ff54d68408679b6caceb9b354bb3e
         /*Ejercicio 5
         Obtener e imprimir por consola una colección de todas las consultas dentro de un rango
         de fechas determinado.*/
+        Consulta consulta3 = new Consulta(fecha:Date.parse('yyyy-MM-dd','2017-06-11'),hora:'11:15',motivo:'consulta',diagnostico:'Fatality',tratamiento:'internacion',paciente:paciente3)
+        consulta3.save()
         if(!consulta1.save(flush:true)){
             consulta1.errors.allErrors.each{
             println it
           }
         }
-
         def fechaFin = Date.parse('yyyy-MM-dd','2018-12-21')
         def fechaIni = Date.parse('yyyy-MM-dd','2015-10-15')
         def listaConsultas = Consulta.findAll("from Consulta as c where c.fecha>=? and c.fecha<=?", [fechaIni,fechaFin])
         //def listaD = [listaConsultas]
-        println listaConsultas
         //println listaD 
-
-        /*def lista = [consulta1, consulta2]
-        println lista.size()
-        for(consulta in lista) {
-            println consulta
-        }*/
-        //println lista.get[0]
+        for(cons in listaConsultas) {
+            println cons
+        }
     }
     def destroy = {
     }
