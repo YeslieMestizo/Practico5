@@ -7,8 +7,18 @@ class BootStrap {
         /*Ejercicio 1
         Crear 2 instancias de la clase Paciente(paciente1 y paciente2),1 con todas sus
         propiedades correctas y otra instancia con algún atributo incorrecto*/
+<<<<<<< HEAD
         Paciente paciente1 = new Paciente(nroDocumento:22137612,apellido:'LOPEZ',nombre:'LUIS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1998-04-23'),telefono:'368-132211',email:'lulo@gmail.com')
         Paciente paciente2 = new Paciente(nroDocumento:22134612,apellido:'CANO',nombre:'MATHIAS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1995-11-14'),telefono:'332-476688',email:'maty@gmail.com')
+=======
+<<<<<<< HEAD
+        Paciente paciente1 = new Paciente(nroDocumento:22137612, apellido:'LOPEZ',nombre:'LUIS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1998-04-23'), telefono:'308-132211', email:'lulo@gmail.com')
+        Paciente paciente2 = new Paciente(nroDocumento:22134612, apellido:'CANO',nombre:'MATHIAS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1995-11-14'), telefono:'332-334766', email:'maty@gmail.com')
+=======
+        Paciente paciente1 = new Paciente(nroDocumento:22137612,apellido:'LOPEZ',nombre:'LUIS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1998-04-23'),telefono:30813221123,email:'lulo@gmail.com')
+        Paciente paciente2 = new Paciente(nroDocumento:22134612,apellido:'CANO',nombre:'MATHIAS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1995-11-14'),telefono:33233476688,email:'maty@gmail.com')
+>>>>>>> a870265a880e7b25315534187a34a30ab9a8be87
+>>>>>>> 327f073e0c63ef2c3d661b84e8c0e9c891ae4e22
         paciente1.save()
         paciente2.save()
         if(!paciente1.save(flush:true)){
