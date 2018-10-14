@@ -1,10 +1,6 @@
 package pacientes
 
 class Consulta {
-<<<<<<< HEAD
-
-=======
->>>>>>> 24910d619bf98bf8c198c3bed3e40d3d7ac0467b
     Date fecha
     String hora
     String motivo
