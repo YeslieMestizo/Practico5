@@ -7,8 +7,8 @@ class BootStrap {
         /*Ejercicio 1
         Crear 2 instancias de la clase Paciente(paciente1 y paciente2),1 con todas sus
         propiedades correctas y otra instancia con algún atributo incorrecto*/
-        def paciente1 = new Paciente(nroDocumento:22137612, apellido:'LOPEZ',nombre:'LUIS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1998-04-23'), telefono:30813221123, email:'lulo@gmail.com')
-        def paciente2 = new Paciente(nroDocumento:22134612, apellido:'CANO',nombre:'MATHIAS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1995-11-14'), telefono:33233476688, email:'maty@gmail.com')
+        Paciente paciente1 = new Paciente(nroDocumento:22137612, apellido:'LOPEZ',nombre:'LUIS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1998-04-23'), telefono:'308-132211', email:'lulo@gmail.com')
+        Paciente paciente2 = new Paciente(nroDocumento:22134612, apellido:'CANO',nombre:'MATHIAS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1995-11-14'), telefono:'332-334766', email:'maty@gmail.com')
         paciente1.save()
         paciente2.save()
         if(paciente1.equals(paciente2)){
@@ -36,7 +36,7 @@ class BootStrap {
         /*Ejercicio 4
         Crear y guardar tres instancias de la clase “Practica”, donde dos de ellas correspondan al
         “TipoPractica” con código igual a “231265”*/
-        def paciente3 = new Paciente(nroDocumento:22538692, apellido:'MONO',nombre:'LEO',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1981-02-03'), telefono:332-546285, email:'leo@gmail.com')
+        Paciente paciente3 = new Paciente(nroDocumento:22538692, apellido:'MONO',nombre:'LEO',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1981-02-03'), telefono:'332-546285', email:'leo@gmail.com')
         Practica practica1 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-10-13'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-10-23'),resultado:'bueno',paciente:paciente1, tipoPractica:tipo1)
         Practica practica2 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-11-12'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-11-28'),resultado:'medio',paciente:paciente2, tipoPractica:tipo1)
         Practica practica3 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-12-05'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-12-30'),resultado:'bueno',paciente:paciente3, tipoPractica:tipo2)
