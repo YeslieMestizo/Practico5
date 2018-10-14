@@ -7,16 +7,25 @@ class BootStrap {
         /*Ejercicio 1
         Crear 2 instancias de la clase Paciente(paciente1 y paciente2),1 con todas sus
         propiedades correctas y otra instancia con algún atributo incorrecto*/
-        def paciente1 = new Paciente(nroDocumento:22137612, apellido:'LOPEZ',nombre:'LUIS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1998-04-23'), telefono:30813221123, email:'lulo@gmail.com')
-        def paciente2 = new Paciente(nroDocumento:22134612, apellido:'CANO',nombre:'MATHIAS',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1995-11-14'), telefono:33233476688, email:'maty@gmail.com')
+        Paciente paciente1 = new Paciente(nroDocumento:22137612,apellido:'LOPEZ',nombre:'LUIS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1998-04-23'),telefono:30813221123,email:'lulo@gmail.com')
+        Paciente paciente2 = new Paciente(nroDocumento:22134612,apellido:'CANO',nombre:'MATHIAS',sexo:'M',fechaNacimiento:Date.parse('yyyy-MM-dd','1995-11-14'),telefono:33233476688,email:'maty@gmail.com')
         paciente1.save()
         paciente2.save()
+        if(!paciente1.save(flush:true)){
+          paciente1.errors.allErrors.each{
+            println it
+          }
+        }
         if(paciente1.equals(paciente2)){
             println "ERROR"
         }
-        def listaPaciente= Paciente.findAll("from Paciente")
-        println listaPaciente.nombre
-    
+        def listaPaciente = Paciente.findAll("from Paciente")
+        def listaPacs = [paciente1,paciente2]
+        //def listaPacs = [listaPaciente]
+        //println listaPaciente
+        for(pac in listaPacs) {
+            println "DNI "+pac.nroDocumento+", Apellido: "+pac.apellido+", Nombre: "+pac.nombre+", Sexo: "+pac.sexo+", Fecha nacimiento: "+pac.fechaNacimiento
+        }
     
         /*Ejercicio 2
         Crear y guardar dos instancias de la clase “Consulta” correspondientes al “paciente1”.*/
@@ -32,12 +41,29 @@ class BootStrap {
         consulta2.save()
         tipo1.save()
         tipo2.save()
-        
+
         
         /*Ejercicio 5
         Obtener e imprimir por consola una colección de todas las consultas dentro de un rango
         de fechas determinado.*/
-        //lista [] = lista.add(consulta1)
+        if(!consulta1.save(flush:true)){
+            consulta1.errors.allErrors.each{
+            println it
+          }
+        }
+
+        def fechaFin = Date.parse('yyyy-MM-dd','2018-12-21')
+        def fechaIni = Date.parse('yyyy-MM-dd','2015-10-15')
+        def listaConsultas = Consulta.findAll("from Consulta as c where c.fecha>=? and c.fecha<=?", [fechaIni,fechaFin])
+        //def listaD = [listaConsultas]
+        println listaConsultas
+        //println listaD 
+
+        /*def lista = [consulta1, consulta2]
+        println lista.size()
+        for(consulta in lista) {
+            println consulta
+        }*/
         //println lista.get[0]
     }
     def destroy = {
