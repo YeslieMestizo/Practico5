@@ -17,7 +17,6 @@ class BootStrap {
     def listaPaciente= Paciente.findAll("from Paciente as p where p.fechaNacimiento >= ? and p.fechaNacimiento<=?",[fechaD,fechaH])
     println listaPaciente
 
-
     }
     def destroy = {
     }
