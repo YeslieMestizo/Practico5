@@ -6,6 +6,7 @@ class Consulta {
     String motivo
     String diagnostico
     String tratamiento
+    
     static constraints = {
       fecha (blank:false )
       hora(blank: false, matches:"[0-9]{2}:[0-9]{2}")
