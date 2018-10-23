@@ -8,8 +8,7 @@ class Paciente {
   Date fechaNacimiento
   String telefono
   String email
-  //static hasMany = [consultas: Consulta]
-  static hasMany = [practicas: Practica]
+  static hasMany = [consultas: Consulta]
 
     static constraints = {
       nroDocumento(blank:false, unique:true)

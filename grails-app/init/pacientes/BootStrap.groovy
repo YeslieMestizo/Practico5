@@ -67,16 +67,9 @@ class BootStrap {
         def fechaFin = Date.parse('yyyy-MM-dd','2018-12-21')
         def fechaIni = Date.parse('yyyy-MM-dd','2015-10-15')
         def listaConsultas = Consulta.findAll("from Consulta as c where c.fecha>=? and c.fecha<=?", [fechaIni,fechaFin])
-        //def listaD = [listaConsultas]
+        
         println listaConsultas
-        //println listaD
-
-        /*def lista = [consulta1, consulta2]
-        println lista.size()
-        for(consulta in lista) {
-            println consulta
-        }*/
-        //println lista.get[0]
+        
 
         /*Ejercicio 6
         Obtener e imprimir por consola una colección todas las practicas pertenecientes al
@@ -88,11 +81,17 @@ class BootStrap {
             println " " + p.fechaPrescripcion + p.fechaRealizacion
             }
         
-
-        //println listaD 
-        //for(cons in listaConsultas){
-          //  println cons
-        //}
+        /*nuevas instancias
+        Consulta consulta4 = new Consulta(fecha:Date.parse('yyyy-MM-dd','2017-02-11'),hora:'12:15',motivo:'consulta4',diagnostico:'Revision',tratamiento:'continua anterior')
+        consulta4.save()
+        Consulta consulta5 = new Consulta(fecha:Date.parse('yyyy-MM-dd','2017-01-11'),hora:'09:15',motivo:'consulta5',diagnostico:'Revision',tratamiento:'continua anterior')
+        consulta5.save()
+        Practica practica4 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-10-13'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-10-23'),resultado:'bueno',paciente:paciente1, tipoPractica:tipo1)
+        Practica practica5 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-11-12'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-11-28'),resultado:'medio',paciente:paciente2, tipoPractica:tipo1)
+        Practica practica6 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-12-05'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-12-30'),resultado:'bueno',paciente:paciente3, tipoPractica:tipo2)
+        practica4.save()
+        practica5.save()
+        practica6.save()*/
     }
     def destroy = {
     }

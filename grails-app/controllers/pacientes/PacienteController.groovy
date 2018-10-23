@@ -12,6 +12,7 @@ class PacienteController {
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond pacienteService.list(params), model:[pacienteCount: pacienteService.count()]
+        
     }
 
     def show(Long id) {
