@@ -28,8 +28,7 @@ header{
 	align-items: center;
 }
 
-footer{
+.footer{
 	text-align: center;
 	color: white;
-	background-color: black;
 }

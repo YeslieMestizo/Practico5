@@ -6,6 +6,9 @@ class Consulta {
     String motivo
     String diagnostico
     String tratamiento
+    Paciente paciente
+    
+    static belongsTo = [paciente :Paciente]
     
     static constraints = {
       fecha (blank:false )

@@ -27,7 +27,7 @@
             </g:hasErrors>
             <g:form resource="${this.consulta}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="consulta"/>
+                    <f:all bean="consulta" except="practicas"/><!--para agregar los que no se quieren mostrar. Ya no va a mostrar ese link.//otra opcion es poner: label,input, label, input. Copiar todas las etiq-->
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

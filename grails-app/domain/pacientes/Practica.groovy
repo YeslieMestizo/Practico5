@@ -6,7 +6,7 @@ class Practica {
     String resultado
     Paciente paciente
     //static belongsTo = [paciente: Paciente]
-    static belongsTo = [tipoPractica: TipoPractica]
+    static belongsTo = [tipoPractica: TipoPractica, paciente: Paciente]
 
     static constraints = {
         fechaPrescripcion (blank:false)

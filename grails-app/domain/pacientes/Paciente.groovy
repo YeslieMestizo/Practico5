@@ -9,7 +9,7 @@ class Paciente {
   String telefono
   String email
   //static hasMany = [consultas: Consulta]
-  static hasMany = [practicas: Practica]
+  static hasMany = [practicas: Practica, consultas: Consulta]
 
     static constraints = {
       nroDocumento(blank:false, unique:true)

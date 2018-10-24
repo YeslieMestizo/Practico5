@@ -96,4 +96,8 @@ class ConsultaController {
             '*'{ render status: NOT_FOUND }
         }
     }
+    def crearPractica(){
+        //def Practica practica
+        params.consultaId
+    }
 }

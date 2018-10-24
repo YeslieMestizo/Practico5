@@ -10,7 +10,8 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informacion <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Pacientes: </a></li>
+                <li><a href="#">Pacientes: </a>
+                </li>
                 <li><a href="#">Consultas: ${grails.util.Environment.current.name}</a></li>
                 <li><a href="tipoPractica/index.gsp">Practicas: ${grails.util.Environment.current.name}</a></li>
                 <!--<li><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
@@ -48,8 +49,8 @@
 
     <div class="svg" role="presentation">
         <div class="grails-logo-container">
-            <!--<asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>-->
-            <asset:image src="fondo2.png" width="100%" heigth="20%" class="grails-logo"/>
+        <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
+            <!--<asset:image src="fondo2.png" width="100%" heigth="20%" class="grails-logo"/>-->
         </div>
     </div>
 
@@ -57,24 +58,24 @@
         <section class="row colset-2-its">
             <h1 style="font-size: 40px;">C O N S U L T A S</h1>
             <p>
-                Bienvenido<br>Aqui usted puede realizar sus consultas.
+                Bienvenido<br>Aqui usted puede realizar sus consultas.<br>
+                
             </p>
             <div id="controllers" role="navigation">
                 <h2>Available Controllers:</h2>
-                <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort{it.fullName}}">
-                        <li class="controller">
-                            <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                        </li>
-                    </g:each>
-                </ul>
+                <form>
+                    <ul>
+                        <g:each var="c" in="${grailsApplication.controllerClasses.sort{it.fullName}}">
+                            <li class="controller">
+                                <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+                            </li>
+                        </g:each>
+                    </ul>
+                </form>
+                
             </div>
         </section>
     </div>
     <br><br><hr>
-    <footer>
-        Catamarca - soporte-medico<br>
-        Argentina
-    </footer>
 </body>
 </html>
