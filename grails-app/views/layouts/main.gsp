@@ -7,8 +7,8 @@
         <g:layoutTitle default="Pacientes"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
-    <!--<asset:link rel="icon" href="ico3.png" type="image/x-ico" />-->
+    <!--<asset:link rel="icon" href="favicon.ico" type="image/x-ico" />-->
+    <asset:link rel="icon" href="ico3.png" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
 
     <g:layoutHead/>
@@ -25,11 +25,11 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/#">
-		            <asset:image src="grails.svg" alt="Grails Logo"/>
-                    <!--<asset:image src="ico2.png" alt="Grails Logo"/>-->
+		            <!--<asset:image src="grails.svg" alt="Grails Logo"/>-->
+                    <asset:image src="ico2.png" alt="Grails Logo"/>
                 </a>
             </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height:0.8px;">
+            <div class="navbar-collapse collapse" aria-expanded="false" style="height:2.8px;">
                 <ul class="nav navbar-nav navbar-right">
                     <g:pageProperty name="page.nav" />
                 </ul>
@@ -39,7 +39,7 @@
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo">Catamarca - Argentina</div>
+    <div class="footer" role="contentinfo">Catamarca - Soporte-medico - Argentina</div>
 
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>

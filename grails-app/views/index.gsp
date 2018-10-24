@@ -4,6 +4,7 @@
     <meta name="layout" content="main"/>
     <title>Consultas Medicas</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <asset:javascript src="application.js"/>
 </head>
 <body>
     <header>
@@ -50,8 +51,8 @@
 
     <div class="svg" role="presentation">
         <div class="grails-logo-container">
-        <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-            <!--<asset:image src="fondo2.png" width="100%" heigth="20%" class="grails-logo"/>-->
+        <!--<asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>-->
+            <asset:image src="fondo2.png" width="100%" heigth="20%" class="grails-logo"/>
         </div>
     </div>
 
@@ -59,10 +60,8 @@
         <section class="row colset-2-its">
             <h1 style="font-size: 40px;">C O N S U L T A S</h1>
             <p>
-                Bienvenido<br>Aqui usted puede realizar sus consultas.<br>
-                
+                Bienvenido<br>Aqui usted puede realizar sus consultas.<br>              
             </p>
-<<<<<<< HEAD
             <div id="controllers" role="navigation">
                 <h2>Available Controllers:</h2>
                 <form>
@@ -76,8 +75,6 @@
                 </form>
                 
             </div>
-=======
->>>>>>> 5a96dfefa37449cb7c52757a97e58f60364861cb
         </section>
     </div>
     <div class="row">
@@ -134,19 +131,6 @@
     </section>
     </div>
     </div>
-    
-
-    
-    
     <br><br><hr>
-<<<<<<< HEAD
-=======
-    <footer>
-        Catamarca - soporte-medico<br>
-        Argentina
-    </footer>
-    
-    
->>>>>>> 5a96dfefa37449cb7c52757a97e58f60364861cb
 </body>
 </html>

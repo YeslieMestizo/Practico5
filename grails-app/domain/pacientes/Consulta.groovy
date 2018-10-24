@@ -6,15 +6,10 @@ class Consulta {
     String motivo
     String diagnostico
     String tratamiento
-<<<<<<< HEAD
     Paciente paciente
     
-    static belongsTo = [paciente :Paciente]
-    
-=======
     static belongsTo = [paciente: Paciente]
     static hasMany = [practicas: Practica]
->>>>>>> 5a96dfefa37449cb7c52757a97e58f60364861cb
     static constraints = {
       fecha (blank:false )
       hora(blank: false, matches:"[0-9]{2}:[0-9]{2}")

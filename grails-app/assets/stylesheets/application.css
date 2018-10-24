@@ -18,8 +18,9 @@ body{
 }
 
 h1{
-	font-family: "Helvetica";
-	font-style: bold; 
+	font-family: "Tahoma";
+	font-style: bold;
+	color: darkgray; 
 }
 
 header{
