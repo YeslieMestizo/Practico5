@@ -3,6 +3,7 @@
 <head>
     <meta name="layout" content="main"/>
     <title>Consultas Medicas</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header>
@@ -61,6 +62,7 @@
                 Bienvenido<br>Aqui usted puede realizar sus consultas.<br>
                 
             </p>
+<<<<<<< HEAD
             <div id="controllers" role="navigation">
                 <h2>Available Controllers:</h2>
                 <form>
@@ -74,8 +76,77 @@
                 </form>
                 
             </div>
+=======
+>>>>>>> 5a96dfefa37449cb7c52757a97e58f60364861cb
         </section>
     </div>
+    <div class="row">
+    <div class="col-sm-6">
+            <!-- Content 1 -->
+    <section class="content">
+        <div class="container">
+            <asset:image src="paciente.jpg"  class="img-responsive img-circle center-block" alt=""/>
+            <h2 class="section-header">Pacientes</h2>
+            <p class="lead text-muted">Aquí podra realizar operaciones tales como crear un nuevo paciente, modificar datos o eliminar</p>
+            <g:link controller="Paciente" class="btn btn-primary btn-lg">Operar</g:link> 
+            
+        </div>
+    </section>
+    </div>
+    <div class="col-sm-6"> 
+    <!-- Content 2 -->
+    <section class="content">
+        <div class="container">
+            <asset:image src="consulta.jpg"  class="img-responsive img-circle center-block" alt=""/>
+            <h2 class="section-header">Consulta de Pacientes</h2>
+            <p class="lead text-muted">Aquí podra realizar operaciones tales como crear un nueva consulta sobre los pacientes, modificar datos o eliminar</p>
+            <g:link controller="Consulta" class="btn btn-primary btn-lg">Operar</g:link>
+            
+        </div>
+    </section>
+    </div>
+    </div>
+    
     <br><br><hr>
+    <div class="row">
+    <div class="col-sm-6"> 
+        <!-- Content 3 -->
+    <section class="content ">
+        <div class="container">
+            <asset:image src="practica.jpg"  class="img-responsive img-circle center-block" alt=""/>
+            <h2 class="section-header">Practica de Pacientes</h2>
+            <p class="lead text-muted">Aquí podra realizar operaciones tales como crear una nueva practica sobre un paciente, modificar datos o eliminar</p>
+            <g:link controller="Practica" class="btn btn-primary btn-lg">Operar</g:link> 
+            
+        </div>
+    </section>
+    </div>
+    <div class="col-sm-6">
+    <!-- Content 4 -->
+    <section class="content ">
+        <div class="container">
+            <asset:image src="tipoPractica.jpg"  class="img-responsive img-circle center-block" alt=""/>
+            <h2 class="section-header">Tipo de Practica de Pacientes</h2>
+            <p class="lead text-muted">Aquí podra realizar operaciones tales como crear un nuevo tipo de practica, modificar datos o eliminar</p>
+            <g:link controller="TipoPractica" class="btn btn-primary btn-lg">Operar</g:link>
+            
+        </div>
+    </section>
+    </div>
+    </div>
+    
+
+    
+    
+    <br><br><hr>
+<<<<<<< HEAD
+=======
+    <footer>
+        Catamarca - soporte-medico<br>
+        Argentina
+    </footer>
+    
+    
+>>>>>>> 5a96dfefa37449cb7c52757a97e58f60364861cb
 </body>
 </html>
