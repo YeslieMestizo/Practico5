@@ -14,5 +14,6 @@ interface ConsultaService {
     void delete(Serializable id)
 
     Consulta save(Consulta consulta)
+    
 
 }
