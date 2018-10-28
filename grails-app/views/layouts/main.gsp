@@ -7,7 +7,6 @@
         <g:layoutTitle default="Pacientes"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!--<asset:link rel="icon" href="favicon.ico" type="image/x-ico" />-->
     <asset:link rel="icon" href="ico3.png" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
 
@@ -25,7 +24,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/#">
-		            <!--<asset:image src="grails.svg" alt="Grails Logo"/>-->
                     <asset:image src="ico2.png" alt="Grails Logo"/>
                 </a>
             </div>
