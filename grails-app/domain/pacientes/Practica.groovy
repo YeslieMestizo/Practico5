@@ -11,9 +11,14 @@ class Practica {
     TipoPractica tipoPractica
 
     static constraints = {
-        fechaPrescripcion (blank:false)
-        //fechaRealizacion (blank:false, validator: {fechaPrescripcion-> if (it < fechaPrescripcion) return [‘fechaRealizacioInvalida’]} )
-        resultado (maxSize:500)
-        consulta(nullable:true)
+      fechaPrescripcion validator: {
+        Date fechaActual = new Date();
+          if(it>fechaActual) return ['prescripcionIncorrecta'];
+        }
+      fechaRealizacion validator: {fechaRealizacion,obj ->
+          if(fechaRealizacion<obj.fechaPrescripcion) return ['realizacioInvalida'];
+        }
+      resultado (maxSize:500)
+      consulta(nullable:true)
     }
 }
