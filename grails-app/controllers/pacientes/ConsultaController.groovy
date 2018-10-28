@@ -96,4 +96,13 @@ class ConsultaController {
             '*'{ render status: NOT_FOUND }
         }
     }
+    def agregarPractica(Long id){
+        //def Practica practica
+        //params.consultaId
+        def consulta = consultaService.get(id)
+        def practica = new Practica(params)
+        practica.consulta = consulta
+       render(view:"agregarPractica",model:[practica:practica])
+        //respond practica
+    }
 }

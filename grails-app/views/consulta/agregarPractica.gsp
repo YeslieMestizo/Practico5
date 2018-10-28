@@ -24,9 +24,19 @@
                 <fieldset class="buttons">
                     <g:link class="edit" action="edit" resource="${this.consulta}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
 
-                    <g:link class="edit" controller="Consulta" action="agregarPractica" params="[id:this.consulta.id]" >agregar practica</g:link>
+                    <g:link class="edit" action="agregarPractica" >agregar practica</g:link>
 
                     <input class="delete" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                </fieldset>
+            </g:form>
+            <g:form resource="${this.practica}" method="POST">
+                <fieldset class="form">
+                    <f:all bean="practica" except="consulta"/>
+                </fieldset>
+
+
+                <fieldset class="buttons">
+                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </fieldset>
             </g:form>
         </div>
