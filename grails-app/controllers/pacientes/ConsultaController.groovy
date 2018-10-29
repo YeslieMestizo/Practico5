@@ -102,7 +102,8 @@ class ConsultaController {
         def consulta = consultaService.get(id)
         def practica = new Practica(params)
         practica.consulta = consulta
-       render(view:"agregarPractica",model:[practica:practica])
+       //render(view:"agregarPractica",model:[practica:practica,tipoList:tipo])
+       [practica:practica]
         //respond practica
     }
 }

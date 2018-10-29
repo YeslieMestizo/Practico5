@@ -28,8 +28,8 @@ class BootStrap {
         }
         /*Ejercicio 2
         Crear y guardar dos instancias de la clase “Consulta” correspondientes al “paciente1”.*/
-        Consulta consulta1 = new Consulta (fecha:Date.parse('yyyy-MM-dd','2015-10-13'),hora:'12:12',motivo:'consulta',diagnostico:'Nada complicado',tratamiento:'reposo',paciente:paciente1)
-        Consulta consulta2 = new Consulta (fecha:Date.parse('yyyy-MM-dd','2015-10-15'),hora:'10:12',motivo:'consulta',diagnostico:'grave',tratamiento:'pastilla xx',paciente:paciente2)
+        Consulta consulta1 = new Consulta (fecha:Date.parse('yyyy-MM-dd','2019-11-13'),hora:'12:12',motivo:'consulta',diagnostico:'Nada complicado',tratamiento:'reposo',paciente:paciente1)
+        Consulta consulta2 = new Consulta (fecha:Date.parse('yyyy-MM-dd','2019-11-15'),hora:'10:12',motivo:'consulta',diagnostico:'grave',tratamiento:'pastilla xx',paciente:paciente2)
 
         /*Ejercicio 3
         Crear y guardar dos instancias de la clase “TipoPractica”, donde una contenga el
@@ -45,9 +45,9 @@ class BootStrap {
         Crear y guardar tres instancias de la clase “Practica”, donde dos de ellas correspondan al
         “TipoPractica” con código igual a “231265”*/
         Paciente paciente3 = new Paciente(nroDocumento:22538692, apellido:'MONO',nombre:'LEO',sexo:'M', fechaNacimiento:Date.parse('yyyy-mm-dd','1981-02-03'), telefono:'332-546285', email:'leo@gmail.com')
-        Practica practica1 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-10-13'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-10-23'),resultado:'bueno',paciente:paciente1, tipoPractica:tipo1)
-        Practica practica2 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-11-12'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-11-28'),resultado:'medio',paciente:paciente2, tipoPractica:tipo1)
-        Practica practica3 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-12-05'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-12-30'),resultado:'bueno',paciente:paciente3, tipoPractica:tipo2)
+        Practica practica1 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-10-13'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-12-15'),resultado:'bueno',paciente:paciente1, tipoPractica:tipo1)
+        Practica practica2 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-10-12'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-12-15'),resultado:'medio',paciente:paciente2, tipoPractica:tipo1)
+        Practica practica3 = new Practica (fechaPrescripcion:Date.parse('yyyy-MM-dd','2018-10-05'),fechaRealizacion:Date.parse('yyyy-MM-dd','2018-12-15'),resultado:'bueno',paciente:paciente3, tipoPractica:tipo2)
         paciente3.save()
         practica1.save()
         practica2.save()
@@ -57,7 +57,7 @@ class BootStrap {
         /*Ejercicio 5
         Obtener e imprimir por consola una colección de todas las consultas dentro de un rango
         de fechas determinado.*/
-        Consulta consulta3 = new Consulta(fecha:Date.parse('yyyy-MM-dd','2017-06-11'),hora:'11:15',motivo:'consulta',diagnostico:'Fatality',tratamiento:'internacion',paciente:paciente3)
+        Consulta consulta3 = new Consulta(fecha:Date.parse('yyyy-MM-dd','2019-06-11'),hora:'11:15',motivo:'consulta',diagnostico:'Fatality',tratamiento:'internacion',paciente:paciente3)
         consulta3.save()
         if(!consulta1.save(flush:true)){
             consulta1.errors.allErrors.each{

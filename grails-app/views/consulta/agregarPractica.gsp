@@ -31,7 +31,7 @@
             </g:form>
             <g:form resource="${this.practica}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="practica" except="consulta"/>
+                    <f:all bean="practica"/>                    
                 </fieldset>
 
 

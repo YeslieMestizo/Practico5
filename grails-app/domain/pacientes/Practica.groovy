@@ -4,11 +4,9 @@ class Practica {
     Date fechaPrescripcion
     Date fechaRealizacion
     String resultado
-    Paciente paciente
     //static belongsTo = [paciente: Paciente]
     static belongsTo = [tipoPractica: TipoPractica, paciente: Paciente]
     Consulta consulta
-    TipoPractica tipoPractica
 
     static constraints = {
       fechaPrescripcion validator: {
